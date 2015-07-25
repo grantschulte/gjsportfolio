@@ -1,0 +1,59 @@
+/*
+// Header
+*/
+
+header {
+  height: 80px;
+  padding: 0 30px;
+  line-height: 80px;
+  border-bottom: 1px solid #efefef;
+
+  h1 {
+    display: inline-block;
+    margin: 0;
+    line-height: 80px;
+
+
+    a {
+      color: #222;
+      vertical-align: middle;
+      font-size: 18px;
+    }
+  }
+
+  .mobile-trigger {
+    display: inline-block;
+    float: right;
+    line-height: 80px;
+
+    span {
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 24px;
+    }
+  }
+
+  // nav {
+  //   display: inline-block;
+  //   float: right;
+  //
+  //   ul {
+  //     display: inline-block;
+  //
+  //     li {
+  //       margin-left: 20px;
+  //       line-height: 50px;
+  //
+  //       a {
+  //         color: #111;
+  //         font-size: 14px;
+  //         font-weight: bold;
+  //
+  //         &.active {
+  //           color: #333;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+}

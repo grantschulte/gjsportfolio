@@ -1,0 +1,34 @@
+<section class="posts-show content-container" ng-controller="postsShowCtrl" data-id="<%= @post.id %>">
+  <div class="article-menu">
+    <span class="meta">
+      <span class="date" ng-bind="post.created_at | date:'shortDate'"></span>
+    </span>
+
+    <a class="" href="<%= posts_index_path %> ">
+      <span class="fa fa-angle-double-left"></span>
+      View All
+    </a>
+  </div>
+
+  <div class="article-container">
+    <article>
+      <div class="post-heading">
+        <h1 ng-bind="post.title"></h1>
+      </div>
+
+      <div class="post-content" ng-bind-html="post.content"></div>
+
+      <div class="footnotes">
+        <ol>
+          <li>Curabitur laoreet posuere nunc, non convallis nunc elementum in.</li>
+          <li>Nullam eget imperdiet nulla. In et dictum quam.</li>
+          <li>Quisque eget ligula porttitor, pretium dui ut, convallis diam.</li>
+        </ol>
+      </div>
+    </article>
+  </div>
+
+  <aside>
+
+  </aside>
+</section>

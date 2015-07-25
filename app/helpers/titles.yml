@@ -1,0 +1,13 @@
+static:
+  home:
+    title: "Software Engineer"
+posts:
+  show:
+    title: "Scribbles"
+  index:
+    title: "Scribbles"
+projects:
+  show:
+    title: ""
+  index:
+    title: "Projects"

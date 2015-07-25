@@ -1,0 +1,27 @@
+.projects-index {
+  overflow: hidden;
+
+  .featured-project {
+    margin: 0 auto;
+    width: 960px;
+    height: 460px;
+  }
+
+  .project-list {
+    width: 600px;
+    margin: 0 auto;
+    overflow: auto;
+
+    .project-card {
+      margin: 20px 0;
+      color: #aaa;
+      font-size: 16px;
+      line-height: 32px;
+      border-bottom: 1px solid #efefef;
+
+      span {
+
+      }
+    }
+  }
+}

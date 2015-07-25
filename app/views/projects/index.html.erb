@@ -1,0 +1,13 @@
+<section class="projects-index content-container" ng-controller="projectsCtrl">
+  <!-- <div class="featured-project">
+
+  </div> -->
+
+  <div class="project-list">
+    <div ng-repeat="project in projects" class="project-card">
+      <a ng-href="{{ project.project_url }}">
+        <span ng-bind="project.name"></span>
+      </a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,35 @@
+/*
+// Javascript Manifest
+*/
+
+/* Global */
+
+@import 'global';
+@import 'layout';
+@import 'forms';
+@import 'tables';
+@import 'type';
+@import 'buttons';
+@import 'header';
+@import 'footer';
+
+/* Users */
+
+@import 'users/users';
+@import 'users/index';
+@import 'users/show';
+@import 'users/new';
+@import 'users/edit';
+
+/* Static */
+
+@import 'static/pages';
+@import 'static/home';
+
+/* Posts */
+
+@import 'posts/show';
+
+/* Projects */
+
+@import 'projects/index';

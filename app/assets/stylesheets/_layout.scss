@@ -1,0 +1,16 @@
+/*
+ * Layout
+ */
+
+.page-container {
+ width: 100%;
+ overflow: auto;
+}
+
+.content-container {
+ padding: 30px;
+
+ &.no-pad {
+   padding: 0;
+ }
+}

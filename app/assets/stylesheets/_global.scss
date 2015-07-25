@@ -1,0 +1,46 @@
+/*
+ * Global
+ */
+
+ $fontColor: #222;
+
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: 'utopia-std', helvetica, sans-serif;
+  font-size: 14px;
+  color: $fontColor;
+}
+
+a {
+  text-decoration: none;
+  color: $fontColor;
+
+  &:hover {
+
+  }
+}
+
+p {
+  font-size: 16px;
+  line-height: 32px;
+  margin-bottom: 30px;
+}
+
+nav {
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    li {
+      display: inline-block;
+    }
+  }
+}

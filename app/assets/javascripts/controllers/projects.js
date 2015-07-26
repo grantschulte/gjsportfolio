@@ -6,7 +6,7 @@ portfolioApp.controller('projectsCtrl', ['$scope', 'Projects', function($scope, 
   };
 
   var getProjects = function() {
-    Projects.get(function(data) {
+    Projects.query(function(data) {
       $scope.projects = data;
       console.log(data);
     });

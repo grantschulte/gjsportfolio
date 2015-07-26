@@ -3,8 +3,12 @@
 */
 
 portfolioApp.factory('Projects', ['$resource', function($resource) {
-  return $resource('/projects.json', {}, {
+  return $resource('/projects/:id.json', { id: '@id' }, {
     'get': {
+      method: 'GET',
+      isArray: false
+    },
+    'query': {
       method: 'GET',
       isArray: true
     }

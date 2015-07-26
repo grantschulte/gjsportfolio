@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20150725205600) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "posts", force: :cascade do |t|
     t.string   "title"
     t.text     "content"
@@ -20,8 +23,18 @@ ActiveRecord::Schema.define(version: 20150725205600) do
     t.datetime "updated_at", null: false
   end
 
-# Could not dump table "projects" because of following NoMethodError
-#   undefined method `[]' for nil:NilClass
+  create_table "projects", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "short_description"
+    t.string   "toolkit",                        array: true
+    t.string   "image_url"
+    t.string   "site_url"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.boolean  "featured"
+    t.string   "project_url"
+  end
 
   create_table "projects_tools", id: false, force: :cascade do |t|
     t.integer "project_id"

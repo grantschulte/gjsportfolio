@@ -1,9 +1,9 @@
 <section class="projects-index content-container" ng-controller="projectsCtrl">
-  <!-- <div class="featured-project">
+  <div class="loader" ng-hide="pageLoaded">
+    <%= render 'shared/loader' %>
+  </div>
 
-  </div> -->
-
-  <div class="project-list">
+  <div class="project-list" ng-show="pageLoaded">
     <div ng-repeat="project in projects | orderBy: 'id'" class="project-card" ng-class="{ suna: (project.name === 'SunaBros') }">
       <!-- <span ng-bind="project.name"></span> -->
       <a ng-href="{{ project.project_url }}">

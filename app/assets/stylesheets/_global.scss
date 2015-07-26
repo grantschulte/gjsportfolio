@@ -13,18 +13,21 @@
 html, body {
   padding: 0;
   margin: 0;
+  height: 100%;
   font-family: 'utopia-std', helvetica, sans-serif;
   font-size: 14px;
   color: $fontColor;
+}
+body {
+  height: 100%;
 }
 
 a {
   text-decoration: none;
   color: $fontColor;
-
-  &:hover {
-
-  }
+  transition: color 200ms ease-in-out;
+  -webkit-transition: color 200ms ease-in-out;
+  -moz-transition: color 200ms ease-in-out;
 }
 
 p {

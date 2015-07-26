@@ -6,6 +6,7 @@
 
 @import 'global';
 @import 'layout';
+@import 'colors';
 @import 'forms';
 @import 'tables';
 @import 'type';
@@ -33,3 +34,7 @@
 /* Projects */
 
 @import 'projects/index';
+
+/* Components */
+
+@import 'components/loader';

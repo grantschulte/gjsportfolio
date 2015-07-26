@@ -6,16 +6,30 @@ header {
   padding: 0 30px;
   height: 80px;
   line-height: 80px;
+  border-bottom: 1px solid #efefef;
 
   h1 {
     display: inline-block;
     margin: 0;
     line-height: 80px;
+    color: #222;
+    vertical-align: middle;
+    font-size: 16px;
 
     a {
       color: #222;
       vertical-align: middle;
-      font-size: 18px;
+      font-size: 16px;
+      margin: 0 3px;
+
+      &.active,
+      &:hover {
+        color: $headerLinkActive;
+      }
+
+      &:first-child {
+        margin-left: 0;
+      }
     }
   }
 
@@ -32,13 +46,13 @@ header {
   }
 }
 
-/* Border Overrides */
+@media screen and (max-width: 500px) {
+  header h1 a.link-item {
+    display: none;
+  }
 
-.posts_show,
-.static_home,
-.projects_index {
-  header {
-    border-bottom: 1px solid #efefef;
+  header h1 span:nth-of-type(2) {
+    display: none;
   }
 }
 

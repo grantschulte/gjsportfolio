@@ -3,12 +3,12 @@ static:
     title: "Software Engineer"
 posts:
   show:
-    title: "Scribbles"
+    title: "Blog"
   index:
-    title: "Scribbles"
+    title: "Blog"
 projects:
   show:
-    title: ""
+    title: "Projects"
   index:
     title: "Projects"
   edit:

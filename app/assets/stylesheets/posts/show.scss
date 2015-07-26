@@ -82,6 +82,14 @@
 
         p {
           text-align: justify;
+
+          a {
+            color: $bodyLink;
+
+            &:hover {
+              color: $bodyLinkHover;
+            }
+          }
         }
 
         &:after {

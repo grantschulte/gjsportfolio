@@ -3,10 +3,14 @@
 */
 
 header {
+  position: fixed;
   padding: 0 30px;
   height: 80px;
+  width: 100%;
   line-height: 80px;
+  background-color: rgba(255,255,255,0.95);
   border-bottom: 1px solid #efefef;
+  z-index: 1;
 
   h1 {
     display: inline-block;
@@ -33,7 +37,7 @@ header {
     }
   }
 
-  .mobile-trigger {
+  .menu-trigger {
     display: inline-block;
     float: right;
     line-height: 80px;

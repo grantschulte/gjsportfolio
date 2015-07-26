@@ -1,4 +1,4 @@
-portfolioApp.controller('postsShowCtrl', ['$scope', 'Posts', '$routeParams', function($scope, Posts, $routeParams) {
+portfolioApp.controller('postsShowCtrl', ['$scope', 'Posts', function($scope, Posts) {
 
   var init = function() {
     getPosts();

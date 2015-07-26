@@ -12,7 +12,7 @@ portfolioApp.factory('Projects', ['$resource', function($resource) {
       method: 'GET',
       isArray: true
     }
-  })
+  });
 }]);
 
 portfolioApp.factory('Posts', ['$resource', function($resource) {
@@ -25,5 +25,5 @@ portfolioApp.factory('Posts', ['$resource', function($resource) {
       method: 'GET',
       isArray: true
     }
-  })
+  });
 }]);

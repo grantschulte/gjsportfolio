@@ -2,7 +2,9 @@
 // Root Angular App
 */
 
-var portfolioApp = angular.module('portfolioApp', [
+var portfolioApp = {};
+
+portfolioApp = angular.module('portfolioApp', [
   'ngAnimate',
   'ngRoute',
   'ngSanitize',

@@ -5,39 +5,9 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
     watch: {
-      options: {
-        livereload: false
-      },
-      css: {
-        files: 'styles/scss/*.scss',
-        tasks: ['compass']
-      },
       js: {
         files: '<%= jshint.all %>',
-        tasks: ['jshint', 'uglify']
-      },
-      livereload: {
-        files: [
-          '*.html',
-          '*.php',
-          'styles/*.css',
-          'images/**/*.{png,jpg,jpeg,gif,webp,svg}',
-          'images/*.{png,jpg,jpeg,gif,webp,svg}'
-        ]
-      }
-    },
-
-    compass: {
-      dist: {
-        options: {
-          sassDir: 'styles/scss',
-          cssDir: 'styles',
-          outputStyle: 'compressed',
-          httpPath: '/',
-          relativeAssets: true,
-          specify: 'styles/scss/style.css.scss',
-          force: true
-        }
+        tasks: ['jshint']
       }
     },
 
@@ -48,33 +18,8 @@ module.exports = function(grunt) {
       },
       all: [
         'Gruntfile.js',
-        'js/**/*.js',
-        'js/*.js',
-        '!js/build/*.js',
-        '!js/ui/swiper.min.js'
+        'app/assets/javascripts/**/*.js'
       ]
-    },
-
-    uglify: {
-      dist: {
-        options: {
-          mangle: false
-        },
-        files: {
-          'js/build/daversa.min.js': [
-            'js/ui/*.js'
-          ],
-          'js/build/app.min.js': [
-            'js/angular/*.js',
-            'js/angular/**/*.js'
-          ],
-          'js/build/modules.min.js': [
-            'bower_components/**/*.min.js',
-            '!bower_components/angular/*.js',
-            '!bower_components/angular/*.min.js'
-          ]
-        }
-      }
     },
 
     imagemin: {
@@ -85,17 +30,19 @@ module.exports = function(grunt) {
         },
         files: [{
           expand: true,
-          cwd: 'images/',
-          src: '**/*',
-          dest: 'images/build'
+          cwd: 'app/assets/images/',
+          src: 'app/assets/**/*',
+          dest: 'app/assets/images/build'
         }]
       }
     }
   });
 
-  grunt.registerTask('build', [
-    'jshint',
-    'imagemin',
-    'uglify'
-  ]);
+  // grunt.registerTask('watch', [
+  //   'jshint'
+  // ]);
+  //
+  // grunt.registerTask('imagemin', [
+  //   'imagemin'
+  // ]);
 };

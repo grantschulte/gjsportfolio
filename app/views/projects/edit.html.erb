@@ -1,0 +1,13 @@
+<%= form_for(@project, multipart: true) do |f| %>
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :snapshot %>
+    <%= f.file_field :snapshot %>
+  </div>
+  <div class="actions">
+    <%= f.submit 'Upload Image' %>
+  </div>
+<% end %>

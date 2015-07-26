@@ -4,10 +4,19 @@
   </div> -->
 
   <div class="project-list">
-    <div ng-repeat="project in projects" class="project-card">
+    <div ng-repeat="project in projects | orderBy: 'id'" class="project-card" ng-class="{ suna: (project.name === 'SunaBros') }">
+      <!-- <span ng-bind="project.name"></span> -->
       <a ng-href="{{ project.project_url }}">
-        <span ng-bind="project.name"></span>
+        <div class="image-box">
+          <img ng-src="{{ project.image_url }}">
+        </div>
       </a>
+    </div>
+
+    <div ng-repeat="empty in emptyBoxes track by $index" class="project-card">
+      <div class="image-box">
+        <img src="<%= get_image('empty_snapshot.png') %>">
+      </div>
     </div>
   </div>
 </section>

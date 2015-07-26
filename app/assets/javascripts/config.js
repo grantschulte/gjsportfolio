@@ -1,4 +1,3 @@
 portfolioApp.config(function() {
 
-
 });

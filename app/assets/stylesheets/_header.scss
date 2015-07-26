@@ -3,16 +3,14 @@
 */
 
 header {
-  height: 80px;
   padding: 0 30px;
+  height: 80px;
   line-height: 80px;
-  border-bottom: 1px solid #efefef;
 
   h1 {
     display: inline-block;
     margin: 0;
     line-height: 80px;
-
 
     a {
       color: #222;
@@ -32,28 +30,34 @@ header {
       font-size: 24px;
     }
   }
+}
 
-  // nav {
-  //   display: inline-block;
-  //   float: right;
-  //
-  //   ul {
-  //     display: inline-block;
-  //
-  //     li {
-  //       margin-left: 20px;
-  //       line-height: 50px;
-  //
-  //       a {
-  //         color: #111;
-  //         font-size: 14px;
-  //         font-weight: bold;
-  //
-  //         &.active {
-  //           color: #333;
-  //         }
-  //       }
-  //     }
-  //   }
-  // }
+/* Border Overrides */
+
+.posts_show,
+.static_home,
+.projects_index {
+  header {
+    border-bottom: 1px solid #efefef;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  header {
+    padding: 0 20px;
+    height: 60px;
+    line-height: 60px;
+  }
+
+  header h1 {
+    line-height: 60px;
+  }
+
+  header h1 a {
+    font-size: 16px;
+  }
+
+  header .mobile-trigger {
+    line-height: 60px;
+  }
 }

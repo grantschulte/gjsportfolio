@@ -18,4 +18,16 @@ module ApplicationHelper
       base + sep + secondary
     end
   end
+
+  def body_class
+    controller = params[:controller]
+    action = params[:action]
+    controller.to_s + '_' + action.to_s
+  end
+
+  def get_image(image_name)
+    bucket = Rails.application.config.image_bucket
+    controller = params[:controller]
+    bucket + controller + '/' + image_name
+  end
 end

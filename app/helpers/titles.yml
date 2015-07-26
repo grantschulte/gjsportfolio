@@ -11,3 +11,5 @@ projects:
     title: ""
   index:
     title: "Projects"
+  edit:
+    title: "Edit Project"

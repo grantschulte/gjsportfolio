@@ -76,5 +76,20 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  # Hostname
   config.app_hostname = 'https://gjschulte.herokuapp.com/'
+
+  # Paperclick / Amazon S3
+  config.paperclip_defaults = {
+    :storage => :s3,
+    :s3_credentials => {
+      :bucket => ENV['S3_BUCKET_NAME'],
+      :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+      :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+    }
+  }
+
+  # S3 Image Bucket
+  config.image_bucket = 'https://s3-us-west-2.amazonaws.com/gjschulteportfolio/';
 end

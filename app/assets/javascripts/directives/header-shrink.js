@@ -8,13 +8,13 @@ portfolioApp.directive('headerShrink', [function(){
       var drawer   = headerEl.find('.menu-trigger');
 
       var config = {
-        triggerDistance:  headerEl.height(),
-        originalHeight:   headerEl.height(),
-        lineHeight:       headerEl.css('line-height'),
-        shrunkHeight:     '50px',
-        shrunkLineHeight: '50px',
-        animLength:       300,
-        animEasing:       'easeOutQuint'
+        triggerDistance:       headerEl.height(),
+        originalHeight:        headerEl.height(),
+        originalLineHeight:    headerEl.css('line-height'),
+        shrunkHeight:          '50px',
+        shrunkLineHeight:      '50px',
+        animLength:            300,
+        animEasing:            'easeOutQuint'
       };
 
       var isShrunk = false;
@@ -23,44 +23,39 @@ portfolioApp.directive('headerShrink', [function(){
         var fromTop = win.scrollTop();
 
         if (fromTop >= config.triggerDistance && isShrunk === false) {
-          shrinkHeader();
+          animateHeader('shrink');
         }
         else if (fromTop < config.triggerDistance && isShrunk === true) {
-          growHeader();
+          animateHeader('grow');
         }
       });
 
-      var shrinkHeader = function() {
-        isShrunk = true;
+      var animateHeader = function(action) {
+        var height;
+        var lineHeight;
+
+        if (action === 'shrink') {
+          isShrunk = true;
+          height     = config.shrunkHeight;
+          lineHeight = config.shrunkLineHeight;
+        }
+        else if (action === 'grow') {
+          isShrunk = false;
+          height     = config.originalHeight;
+          lineHeight = config.originalLineHeight;
+        }
 
         headerEl.animate({
-          'height': config.shrunkHeight,
-          'line-height': config.shrunkLineHeight
+          'height': height,
+          'line-height': lineHeight
         }, config.animLength, config.animEasing);
 
         heading.animate({
-          'line-height': config.shrunkLineHeight
+          'line-height': lineHeight
         }, config.animLength, config.animEasing);
 
         drawer.animate({
-          'line-height': config.shrunkLineHeight
-        }, config.animLength, config.animEasing);
-      };
-
-      var growHeader = function() {
-        isShrunk = false;
-
-        headerEl.animate({
-          'height': config.originalHeight,
-          'line-height': config.lineHeight
-        }, config.animLength, config.animEasing);
-
-        heading.animate({
-          'line-height': config.lineHeight
-        }, config.animLength, config.animEasing);
-
-        drawer.animate({
-          'line-height': config.lineHeight
+          'line-height': lineHeight
         }, config.animLength, config.animEasing);
       };
     }

@@ -16,9 +16,14 @@
 
     a {
       float: right;
+      color: #222;
 
       span {
         margin-right: 5px;
+      }
+
+      &:hover {
+        color: $bodyLinkHover;
       }
     }
   }

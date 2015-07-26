@@ -18,11 +18,15 @@ footer {
           text-align: center;
           text-transform: uppercase;
           letter-spacing: 2px;
+
+          &:hover {
+            color: $bodyLinkHover;
+          }
         }
 
         &.active {
           a {
-            color: $lightGrey;
+            color: $bodyLinkHover;
           }
         }
       }

@@ -4,16 +4,19 @@
   </div>
 
   <div class="project-list" ng-show="pageLoaded">
-    <div ng-repeat="project in projects | orderBy: 'id'" class="project-card" ng-class="{ suna: (project.name === 'SunaBros') }">
-      <!-- <span ng-bind="project.name"></span> -->
-      <a ng-href="{{ project.site_url }}">
-        <div class="image-box">
-          <img ng-src="{{ project.image_url }}">
-        </div>
-      </a>
+    <div ng-repeat="project in projects | orderBy: 'id'" class="project-card" ng-class="{ suna: (project.name === 'SunaBros') }" project-card>
+      <div class="preview">
+        <span class="name" ng-bind="project.name"></span>
+        <span class="info" ng-bind="project.short_description"></span>
+        <a ng-href="{{ project.site_url }}" target="_blank">View</a>
+      </div>
+
+      <div class="image-box">
+        <img ng-src="{{ project.image_url }}">
+      </div>
     </div>
 
-    <div ng-repeat="empty in emptyBoxes track by $index" class="project-card">
+    <div ng-repeat="empty in emptyBoxes track by $index" class="project-card empty empty{{ $index + 1 }}">
       <div class="image-box">
         <img src="<%= get_image('empty_snapshot.png') %>">
       </div>

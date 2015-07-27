@@ -8,7 +8,7 @@ portfolioApp.directive('projectCard', [function() {
       var config = {
         animLength: 400,
         animEasing: 'easeOutQuint'
-      }
+      };
 
       projectBox.hover(function() {
         previewBox.animate({

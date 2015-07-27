@@ -1,0 +1,10 @@
+<section class="posts-index content-container" ng-controller="postsIndexCtrl">
+  <div class="posts-list">
+    <div class="post" ng-repeat="post in posts | orderBy: 'id'">
+      <span class="date" ng-bind="post.created_at | date:'shortDate'"></span>
+      <h2><a ng-href="{{ '/posts/' + post.id }}" ng-bind="post.title"></a></h2>
+      <div ng-bind-html="(post.content | limitTo: '200') + '...'"></div>
+      <!-- <a ng-href="{{ '/posts/' + post.id }}">Read More<span class="fa fa-angle-double-right"></span></a> -->
+    </div>
+  </div>
+</section>

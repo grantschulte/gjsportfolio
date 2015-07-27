@@ -3,7 +3,6 @@ portfolioApp.directive('projectCard', [function() {
     restrict: 'A',
     link: function(scope, el) {
       var projectBox = $(el);
-      var imageBox   = projectBox.find('.image-box');
       var previewBox = projectBox.find('.preview');
 
       var config = {
@@ -15,17 +14,9 @@ portfolioApp.directive('projectCard', [function() {
         previewBox.animate({
           'top': '0'
         }, config.animLength, config.animEasing);
-
-        imageBox.animate({
-          'top': '100%'
-        }, config.animLength, config.animEasing);
       }, function() {
         previewBox.animate({
           'top': '-100%'
-        }, config.animLength, config.animEasing);
-
-        imageBox.animate({
-          'top': '0'
         }, config.animLength, config.animEasing);
       });
     }

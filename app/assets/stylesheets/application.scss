@@ -14,14 +14,6 @@
 @import 'header';
 @import 'footer';
 
-/* Users */
-
-@import 'users/users';
-@import 'users/index';
-@import 'users/show';
-@import 'users/new';
-@import 'users/edit';
-
 /* Static */
 
 @import 'static/pages';
@@ -30,6 +22,7 @@
 /* Posts */
 
 @import 'posts/show';
+@import 'posts/index';
 
 /* Projects */
 

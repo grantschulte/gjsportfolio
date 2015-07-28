@@ -5,12 +5,14 @@
     margin: 50px auto;
 
     .post {
+      margin-bottom: 40px;
       padding-bottom: 10px;
       border-bottom: 1px solid #efefef;
 
       .date {
         display: block;
         margin-bottom: 20px;
+        font-size: 12px;
       }
 
       h2 {
@@ -27,6 +29,21 @@
 
         &:hover {
           color: $bodyLinkHover;
+        }
+      }
+
+      figure {
+        margin: 20px 0 30px;
+        padding: 25px;
+        border: 1px solid #efefef;
+
+        img {
+          max-width: 100%;
+          margin-bottom: 25px;
+        }
+
+        figcaption {
+          font-size: 12px;
         }
       }
     }

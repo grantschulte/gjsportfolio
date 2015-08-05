@@ -28,7 +28,7 @@ header {
 
       &.active,
       &:hover {
-        color: $bodyLinkHover;
+        color: $redLinkHover;
       }
 
       &:first-child {
@@ -52,7 +52,7 @@ header {
       cursor: pointer;
       
       &:hover {
-        color: $bodyLinkHover;
+        color: $redLinkHover;
       }
     }
   }

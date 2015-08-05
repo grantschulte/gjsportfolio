@@ -27,6 +27,10 @@ module ApplicationHelper
       end
     end
 
+    if (controller != 'posts' && controller != 'projects')
+      title = base + sep + page_title
+    end
+
     title
   end
 
@@ -72,6 +76,14 @@ module ApplicationHelper
           class: 'link-item active'
         )
       end
+    end
+
+    if (controller != 'posts' && controller != 'projects')
+      title = title + content_tag(:span, sep) + content_tag(
+        :a, page_title,
+        href: about_path,
+        class: 'link-page'
+      )
     end
 
     title

@@ -20,13 +20,13 @@ footer {
           letter-spacing: 2px;
 
           &:hover {
-            color: $bodyLinkHover;
+            color: $redLinkHover;
           }
         }
 
         &.active {
           a {
-            color: $bodyLinkHover;
+            color: $redLinkHover;
           }
         }
       }

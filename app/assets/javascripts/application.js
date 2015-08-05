@@ -16,3 +16,4 @@
 //= require_tree ./directives
 //= require factories
 //= require filters
+//= require routes

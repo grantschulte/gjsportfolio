@@ -1,6 +1,8 @@
 static:
   home:
     title: "Software Engineer"
+  about:
+    title: "About"
 posts:
   show:
     title: "Blog"

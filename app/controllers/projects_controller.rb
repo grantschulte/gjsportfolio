@@ -1,6 +1,6 @@
 class ProjectsController < ApplicationController
   def index
-    @projects = Project.all
+    @projects = Project.all.limit(params[:limit]).offset(params[:offset])
 
     @db = Rails.configuration.database_configuration[Rails.env]["database"]
 

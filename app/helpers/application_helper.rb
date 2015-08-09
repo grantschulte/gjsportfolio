@@ -82,7 +82,7 @@ module ApplicationHelper
       title = title + content_tag(:span, sep) + content_tag(
         :a, page_title,
         href: about_path,
-        class: 'link-page'
+        class: 'link-page active'
       )
     end
 

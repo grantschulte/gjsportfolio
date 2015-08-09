@@ -44,7 +44,8 @@ header {
     span {
       display: inline-block;
       float: left;
-      // line-height: 80px;
+      position: relative;
+      top: -1px;
     }
   }
 

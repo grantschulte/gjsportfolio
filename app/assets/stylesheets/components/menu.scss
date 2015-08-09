@@ -18,22 +18,28 @@
       padding: 0;
 
       a {
+        position: relative;
         display: inline-block;
         float: right;
-        margin-bottom: 3px;
-        padding: 0 30px;
+        right: -10px;
+        margin-bottom: 2px;
+        padding: 0 20px;
         height: 40px;
+        width: 130px;
         color: #fff;
+        text-align: left;
         font-family: $lato;
         font-size: 12px;
         font-weight: bold;
         text-transform: uppercase;
         line-height: 40px;
         background-color: $textColor;
+        border-radius: 3px 0 0 3px;
         transition:         all 200ms ease-in-out;
         -webkit-transition: all 200ms ease-in-out;
 
         &:hover {
+          right: 0;
           background-color: $redLinkHover;
         }
       }
@@ -42,19 +48,6 @@
         a {
           background-color: $redLinkHover;
         }
-      }
-
-      &:first-child {
-        // a {
-        //   border-top: 1px solid #efefef;
-        //   border-radius: 4px 0 0 0;
-        // }
-      }
-
-      &:last-child {
-        // a {
-        //   border-radius: 0 0 0 4px;
-        // }
       }
     }
   }

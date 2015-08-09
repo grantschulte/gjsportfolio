@@ -10,11 +10,14 @@ $textColor: #2B2C30;
   -moz-box-sizing: border-box;
 }
 
+$utopia: 'utopia-std', helvetica, sans-serif;
+$lato: 'lato', helvetica, sans-serif;
+
 html, body {
   padding: 0;
   margin: 0;
   height: 100%;
-  font-family: 'utopia-std', helvetica, sans-serif;
+  font-family: 'lato', helvetica, sans-serif;
   font-size: 14px;
   color: $textColor;
   // background-color: #fcfcfc;

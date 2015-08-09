@@ -50,23 +50,23 @@ module ApplicationHelper
       title = title + content_tag(:span, sep) + content_tag(
         :a, page_title,
         href: projects_path,
-        class: 'link-page'
+        class: 'link-page active'
       )
 
-      if (action == 'show')
-        title = title + content_tag(:span, sep) + content_tag(
-          :a, @project['name'],
-          href: page_url,
-          class: 'link-item active'
-        )
-      end
+      # if (action == 'show')
+      #   title = title + content_tag(:span, sep) + content_tag(
+      #     :a, @project['name'],
+      #     href: page_url,
+      #     class: 'link-item active'
+      #   )
+      # end
     end
 
     if (controller == 'posts')
       title = title + content_tag(:span, sep) + content_tag(
         :a, page_title,
         href: posts_index_path,
-        class: 'link-page'
+        class: 'link-page active'
       )
 
       # if (action == 'show')

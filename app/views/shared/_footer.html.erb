@@ -1,7 +1,7 @@
 <footer>
   <nav>
     <ul>
-      <li class="<%= 'active' if is_page?('posts_index') %>">
+      <li class="<%= 'active' if is_page?('posts_index') || params[:controller] == 'posts' %>">
         <a href="<%= posts_index_path %>">Blog</a>
       </li>
       <li class="<%= 'active' if is_page?('projects_index') %>">

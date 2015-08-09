@@ -2,7 +2,7 @@
   overflow: hidden;
   margin-right: -0.5%;
   margin-left: -0.5%;
-  
+
   .project-list {
     width: 100%;
     overflow: auto;
@@ -61,13 +61,16 @@
           color: #fff;
 
           &.name {
-            font-size: 22px;
-            line-height: 26px;
             margin-bottom: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 26px;
+            text-transform: uppercase;
           }
 
           &.info {
-            font-size: 14px;
+            font-size: 12px;
+            font-weight: 300;
             line-height: 18px;
           }
         }
@@ -81,9 +84,9 @@
           height: 44px;
           color: #fff;
           font-size: 14px;
+          font-weight: bold;
           text-align: center;
           text-transform: uppercase;
-          letter-spacing: 3px;
           line-height: 44px;
           background-color: $redLink;
           transition: background 400ms ease-in-out;

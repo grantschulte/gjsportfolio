@@ -6,7 +6,7 @@
     <li class="<%= 'active' if is_page?('projects_index') %>">
       <a href="<%= projects_path %>">Projects</a>
     </li>
-    <li class="<%= 'active' if is_page?('posts_index') %>">
+    <li class="<%= 'active' if is_page?('posts_index') || params[:controller] == 'posts' %>">
       <a href="<%= posts_index_path %>">Blog</a>
     </li>
     <li class="<%= 'active' if is_page?('static_home') %>">

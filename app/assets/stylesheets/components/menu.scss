@@ -24,7 +24,10 @@
         padding: 0 30px;
         height: 40px;
         color: #fff;
-        font-size: 14px;
+        font-family: $lato;
+        font-size: 12px;
+        font-weight: bold;
+        text-transform: uppercase;
         line-height: 40px;
         background-color: $textColor;
         transition:         all 200ms ease-in-out;
@@ -36,9 +39,9 @@
       }
 
       &.active {
-        // a {
-        //   background-color: #fbfbfb;
-        // }
+        a {
+          background-color: $redLinkHover;
+        }
       }
 
       &:first-child {

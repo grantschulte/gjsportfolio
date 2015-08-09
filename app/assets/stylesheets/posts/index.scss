@@ -1,5 +1,4 @@
 .posts-index {
-
   .posts-list {
     width: 580px;
     margin: 50px auto;
@@ -7,29 +6,27 @@
     .post {
       margin-bottom: 60px;
       padding-bottom: 20px;
-      // border-bottom: 1px solid #efefef;
 
       .date {
         display: inline-block;
-        margin-bottom: 20px;
+        margin-bottom: 5px;
         padding: 4px 8px;
         color: $textColor;
         font-size: 10px;
+        font-weight: bold;
         background-color: #f9f9f9;
         border-radius: 2px;
       }
 
       h2 {
         margin-bottom: 15px;
-        font-size: 32px;
+        font-size: 28px;
+        font-weight: bold;
+        text-transform: uppercase;
       }
 
       a {
-        color: $redLink;
-
-        span {
-          margin-left: 5px;
-        }
+        color: $textColor;
 
         &:hover {
           color: $redLinkHover;
@@ -42,15 +39,29 @@
         a {
           display: inline-block;
           float: right;
+          color: $redLink;
           margin-bottom: 15px;
           margin-top: 30px;
           font-size: 16px;
+
+          &:hover {
+            color: $redLinkHover;
+
+            span {
+              color: $redLinkHover;
+            }
+          }
+
+          span {
+            margin-left: 5px;
+          }
         }
       }
 
       .blurb {
         p {
           margin-bottom: 5px;
+          font-weight: 300;
         }
       }
     }

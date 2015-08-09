@@ -1,10 +1,7 @@
 <section class="posts-show content-container" ng-controller="postsShowCtrl" data-id="<%= @post.id %>">
   <div class="article-menu">
-    <!-- <span class="meta">
-      <span class="date" ng-bind="post.created_at | date:'shortDate'"></span>
-    </span> -->
 
-    <div class="post-menu">
+    <!-- <div class="post-menu">
       <a class="" href="<%= posts_index_path %> ">
         <span class="fa fa-angle-double-left"></span>
       </a>
@@ -16,7 +13,7 @@
       <a class="" href="<%= posts_index_path %> ">
         <span class="fa fa-angle-double-right"></span>
       </a>
-    </div>
+    </div> -->
   </div>
 
   <div class="article-container">
@@ -27,7 +24,7 @@
 
       <div class="post-content" ng-bind-html="post.content"></div>
 
-      <div class="footnotes">
+      <div class="footnotes" ng-if="post.footnotes">
         <ol>
           <li>Curabitur laoreet posuere nunc, non convallis nunc elementum in.</li>
           <li>Nullam eget imperdiet nulla. In et dictum quam.</li>

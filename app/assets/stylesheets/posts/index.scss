@@ -5,14 +5,18 @@
     margin: 50px auto;
 
     .post {
-      margin-bottom: 40px;
-      padding-bottom: 10px;
-      border-bottom: 1px solid #efefef;
+      margin-bottom: 60px;
+      padding-bottom: 20px;
+      // border-bottom: 1px solid #efefef;
 
       .date {
-        display: block;
+        display: inline-block;
         margin-bottom: 20px;
-        font-size: 12px;
+        padding: 4px 8px;
+        color: $textColor;
+        font-size: 10px;
+        background-color: #f9f9f9;
+        border-radius: 2px;
       }
 
       h2 {
@@ -29,6 +33,24 @@
 
         &:hover {
           color: $redLinkHover;
+        }
+      }
+
+      > div {
+        overflow: hidden;
+
+        a {
+          display: inline-block;
+          float: right;
+          margin-bottom: 15px;
+          margin-top: 30px;
+          font-size: 16px;
+        }
+      }
+
+      .blurb {
+        p {
+          margin-bottom: 5px;
         }
       }
     }

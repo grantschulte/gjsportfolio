@@ -2,6 +2,7 @@
   $articleWidth: 580px;
   $headlineSize: 40px;
   $headlineLineHeight: 48px;
+  padding-top: 0;
 
   .article-menu {
     width: 100%;
@@ -14,16 +15,27 @@
       float: left;
     }
 
-    a {
-      float: right;
-      color: #222;
+    .post-menu {
+      position: fixed;
+      right: 0;
+      margin-top: 120px;
 
-      span {
-        margin-right: 5px;
-      }
+      a {
+        display: inline-block;
+        clear:both;
+        margin-bottom: 5px;
+        font-size: 18px;
+        height: 40px;
+        width: 40px;
+        line-height: 40px;
+        float: right;
+        color: $textColor;
+        background-color: #f9f9f9;
+        text-align: center;
 
-      &:hover {
-        color: $redLinkHover;
+        &:hover {
+          color: $redLinkHover;
+        }
       }
     }
   }

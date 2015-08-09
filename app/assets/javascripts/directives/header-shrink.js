@@ -12,6 +12,8 @@ portfolioApp.directive('headerShrink', ['$rootScope', function($rootScope){
         triggerDistance:       headerEl.height(),
         originalHeight:        headerEl.height(),
         originalLineHeight:    headerEl.css('line-height'),
+        originalBorder:        headerEl.css('border-bottom'),
+        shrunkBorder:          '1px solid #efefef',
         shrunkHeight:          50,
         shrunkLineHeight:      50,
         animLength:            300,
@@ -34,23 +36,28 @@ portfolioApp.directive('headerShrink', ['$rootScope', function($rootScope){
       var animateHeader = function(action) {
         var height;
         var lineHeight;
+        var border;
 
         if (action === 'shrink') {
           isShrunk = true;
           height     = config.shrunkHeight;
           lineHeight = config.shrunkLineHeight;
+          border     = config.shrunkBorder;
           $rootScope.$broadcast('menuOff');
         }
         else if (action === 'grow') {
           isShrunk = false;
           height     = config.originalHeight;
           lineHeight = config.originalLineHeight;
+          border     = config.originalBorder;
         }
 
         headerEl.animate({
           'height': height,
           'line-height': lineHeight
         }, config.animLength, config.animEasing);
+
+        headerEl.css({ 'border-bottom' : border });
 
         heading.animate({
           'line-height': lineHeight

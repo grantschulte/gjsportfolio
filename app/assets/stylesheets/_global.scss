@@ -2,7 +2,7 @@
  * Global
  */
 
- $fontColor: #2B2C30;
+$textColor: #2B2C30;
 
 * {
   box-sizing: border-box;
@@ -16,11 +16,12 @@ html, body {
   height: 100%;
   font-family: 'utopia-std', helvetica, sans-serif;
   font-size: 14px;
-  color: $fontColor;
+  color: $textColor;
+  // background-color: #fcfcfc;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: $fontColor;
+  color: $textColor;
 }
 
 body {
@@ -29,7 +30,7 @@ body {
 
 a {
   text-decoration: none;
-  color: $fontColor;
+  color: $textColor;
   transition: color 200ms ease-in-out;
   -webkit-transition: color 200ms ease-in-out;
   -moz-transition: color 200ms ease-in-out;

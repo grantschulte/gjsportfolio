@@ -69,13 +69,13 @@ module ApplicationHelper
         class: 'link-page'
       )
 
-      if (action == 'show')
-        title = title + content_tag(:span, sep) + content_tag(
-          :a, truncate(@post['title'], length: 30, separator: ' '),
-          href: page_url,
-          class: 'link-item active'
-        )
-      end
+      # if (action == 'show')
+      #   title = title + content_tag(:span, sep) + content_tag(
+      #     :a, truncate(@post['title'], length: 30, separator: ' '),
+      #     href: page_url,
+      #     class: 'link-item active'
+      #   )
+      # end
     end
 
     if (controller != 'posts' && controller != 'projects')

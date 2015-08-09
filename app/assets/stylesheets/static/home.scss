@@ -60,15 +60,16 @@
   header {
     border-bottom: 0;
     position: absolute;
+    background-color: #fff;
 
     h1 {
       display: none;
     }
   }
 
-  footer {
-    display: none;
-  }
+  // footer {
+  //   display: none;
+  // }
 }
 
 @media screen and (max-width: 768px) {

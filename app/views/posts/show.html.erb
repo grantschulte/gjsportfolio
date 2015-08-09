@@ -1,13 +1,22 @@
 <section class="posts-show content-container" ng-controller="postsShowCtrl" data-id="<%= @post.id %>">
   <div class="article-menu">
-    <span class="meta">
+    <!-- <span class="meta">
       <span class="date" ng-bind="post.created_at | date:'shortDate'"></span>
-    </span>
+    </span> -->
 
-    <a class="" href="<%= posts_index_path %> ">
-      <span class="fa fa-angle-double-left"></span>
-      View All
-    </a>
+    <div class="post-menu">
+      <a class="" href="<%= posts_index_path %> ">
+        <span class="fa fa-angle-double-left"></span>
+      </a>
+
+      <a class="" href="<%= posts_index_path %> ">
+        <span class="fa fa-eye"></span>
+      </a>
+
+      <a class="" href="<%= posts_index_path %> ">
+        <span class="fa fa-angle-double-right"></span>
+      </a>
+    </div>
   </div>
 
   <div class="article-container">

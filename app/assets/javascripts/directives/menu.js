@@ -1,4 +1,4 @@
-portfolioApp.directive('sideMenu', ['$rootScope', function($rootScope){
+portfolioApp.directive('sideMenu', ['$rootScope', function($rootScope) {
   return {
     restrict: 'A',
     link: function(scope, el) {

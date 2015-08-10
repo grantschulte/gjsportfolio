@@ -43,8 +43,12 @@
 
   p {
     margin: 0 auto;
-    width: 500px;
+    width: 600px;
     font-weight: 300;
+
+    span {
+      display: block;
+    }
 
     a {
       color: $redLink;
@@ -87,7 +91,11 @@
 
   .home p {
     font-size: 14px;
-    width: 440px;
+    width: 100%;
+
+    span {
+      display: inline;
+    }
   }
 }
 
@@ -110,10 +118,6 @@
     &:after {
       left: 0;
     }
-  }
-
-  .home p {
-    width: 100%;
   }
 }
 

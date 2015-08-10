@@ -5,7 +5,9 @@
       <h2><a ng-href="{{ '/posts/' + post.id }}" ng-bind="post.title"></a></h2>
       <div>
         <div ng-if="post.figure" ng-bind-html="post.figure"></div>
-        <div class="blurb" ng-bind-html="post.blurb"></div>
+        <div class="blurb">
+          <p ng-bind="post.blurb | concatenate:'...':35"></p>
+        </div>
         <a ng-href="{{ '/posts/' + post.id }}">Continue Reading <span class="fa fa-angle-double-right"></span></a>
       </div>
     </div>

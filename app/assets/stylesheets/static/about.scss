@@ -69,5 +69,29 @@
 }
 
 @media screen and (max-width: 768px) {
-  
+  .about {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .about article,
+  .about aside {
+    display: block;
+    float: none;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .about {
+    margin-top: 50px;
+  }
+
+  .about article,
+  .about aside {
+    width: 100%;
+  }
 }

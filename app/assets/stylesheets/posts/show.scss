@@ -4,41 +4,41 @@
   $headlineLineHeight: 48px;
   padding-top: 0;
 
-  .article-menu {
-    width: 100%;
-    margin: 0 auto 60px;
-    font-size: 12px;
-    overflow: hidden;
-
-    .meta {
-      color: #222;
-      float: left;
-    }
-
-    .post-menu {
-      position: fixed;
-      right: 0;
-      margin-top: 120px;
-
-      a {
-        display: inline-block;
-        clear:both;
-        margin-bottom: 5px;
-        font-size: 18px;
-        height: 40px;
-        width: 40px;
-        line-height: 40px;
-        float: right;
-        color: $textColor;
-        background-color: #f9f9f9;
-        text-align: center;
-
-        &:hover {
-          color: $redLinkHover;
-        }
-      }
-    }
-  }
+  // .article-menu {
+  //   width: 100%;
+  //   margin: 0 auto 60px;
+  //   font-size: 12px;
+  //   overflow: hidden;
+  //
+  //   .meta {
+  //     color: #222;
+  //     float: left;
+  //   }
+  //
+  //   .post-menu {
+  //     position: fixed;
+  //     right: 0;
+  //     margin-top: 120px;
+  //
+  //     a {
+  //       display: inline-block;
+  //       clear:both;
+  //       margin-bottom: 5px;
+  //       font-size: 18px;
+  //       height: 40px;
+  //       width: 40px;
+  //       line-height: 40px;
+  //       float: right;
+  //       color: $textColor;
+  //       background-color: #f9f9f9;
+  //       text-align: center;
+  //
+  //       &:hover {
+  //         color: $redLinkHover;
+  //       }
+  //     }
+  //   }
+  // }
 
   .article-container {
     padding: 0;
@@ -46,7 +46,7 @@
     width: $articleWidth;
 
     article {
-      div.post-heading {
+      .post-heading {
         h1 {
           margin: 0 auto;
           width: 100%;
@@ -91,7 +91,7 @@
         }
       }
 
-      div.post-content {
+      .post-content {
         margin-top: 20px;
 
         .page-number {
@@ -143,5 +143,50 @@
         }
       }
     }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .posts-show .article-container {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .posts-show {
+    margin-top: 80px;
+  }
+
+  .posts-show .article-container article .post-heading h1 {
+    margin-bottom: 0;
+    font-size: 22px;
+    line-height: 28px;
+  }
+
+  .posts-show .article-container article .post-content {
+    margin-top: 10px;
+
+    &:before {
+      margin-bottom: 30px;
+    }
+  }
+
+  .posts-show .article-container article figure {
+    margin-bottom: 25px;
+  }
+
+  .posts-show .article-container article figure img {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .posts-show .article-container article figure {
+    padding: 15px;
+  }
+
+  .posts-show .article-container article img {
+    margin-bottom: 10px;
   }
 }

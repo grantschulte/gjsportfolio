@@ -28,7 +28,6 @@
   h4 {
     position: relative;
     font-size: 16px;
-    // font-weight: 300;
 
     &:after {
       position: relative;
@@ -62,18 +61,10 @@
 
 .static_home {
   header {
-    border-bottom: 0;
-    position: absolute;
-    background-color: #fff;
-
     h1 {
       display: none;
     }
   }
-
-  // footer {
-  //   display: none;
-  // }
 }
 
 @media screen and (max-width: 768px) {
@@ -106,7 +97,7 @@
   }
 
   .home h1 {
-    font-size: 24px;
+    font-size: 40px;
   }
 
   .home h4 {
@@ -118,11 +109,5 @@
     &:after {
       left: 0;
     }
-  }
-}
-
-@media screen and (max-width: 400px) {
-  .home h1 {
-    font-size: 20px;
   }
 }

@@ -67,3 +67,36 @@
     }
   }
 }
+
+@media screen and (max-width: 767px) {
+  .posts-index .posts-list {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .posts-index .posts-list .post h2 {
+    margin-bottom: 0;
+    font-size: 22px;
+    line-height: 28px;
+  }
+
+  .posts-index .posts-list .post figure {
+    margin-bottom: 25px;
+  }
+
+  .posts-index .posts-list .post figure img {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .posts-index .posts-list .post figure {
+    padding: 15px;
+  }
+
+  .posts-index .posts-list .post figure img {
+    margin-bottom: 10px;
+  }
+}

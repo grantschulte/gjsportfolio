@@ -9,6 +9,15 @@ Rails.application.routes.draw do
   resources :projects
 
   # Posts
-  get '/posts' => 'posts#index', as: 'posts_index'
+  get '/posts'     => 'posts#index', as: 'posts_index'
   get '/posts/:id' => 'posts#show', as: 'posts_show'
+
+  # Sessions
+  get '/login'  => 'sessions#new'
+  post '/login' => 'sessions#create'
+  get '/logout' => 'sessions#destroy'
+
+  # Users
+  get '/signup' => 'users#new'
+  post '/users' => 'users#create'
 end

@@ -10,6 +10,7 @@ gem 'jbuilder',             '2.2.3'
 gem 'sdoc',                 '0.4.0', group: :doc
 gem 'pg',                   '0.17.1'
 gem 'paperclip',            '3.4.2'
+gem 'bcrypt',               '~> 3.1.7'
 gem 'aws-sdk'
 
 group :development, :test do

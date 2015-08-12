@@ -1,5 +1,11 @@
 RailsAdmin.config do |config|
 
+  config.authorize_with do
+    authenticate_or_request_with_http_basic('Site Message') do |u, p|
+      u == 'grant' && p == 'i@mth3w@lrus'
+    end
+  end
+
   ### Popular gems integration
 
   ## == Devise ==

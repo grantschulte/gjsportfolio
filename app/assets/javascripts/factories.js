@@ -16,7 +16,7 @@ portfolioApp.factory('Projects', ['$resource', function($resource) {
 }]);
 
 portfolioApp.factory('Posts', ['$resource', function($resource) {
-  return $resource('/posts/:id.json', { id: '@id' }, {
+  return $resource('/posts/:slug.json', { slug: '@slug' }, {
     'get': {
       method: 'GET',
       isArray: false

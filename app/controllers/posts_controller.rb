@@ -1,6 +1,4 @@
 class PostsController < ApplicationController
-  before_filter :authorize
-
   def index
     @posts = Post.all
 
@@ -11,7 +9,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find(params[:id])
+    @post = Post.find_by_slug(params[:id])
     @post_title = @post.title
 
     respond_to do |format|

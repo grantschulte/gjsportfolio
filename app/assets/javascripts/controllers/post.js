@@ -5,11 +5,10 @@ portfolioApp.controller('postsShowCtrl', ['$scope', 'Posts', function($scope, Po
   };
 
   var getPosts = function() {
-    var id = angular.element('.posts-show').data('id');
+    var slug = angular.element('.posts-show').data('slug');
 
-    Posts.get({ id: id }, function(data) {
+    Posts.get({ slug: slug }, function(data) {
       $scope.post = data;
-      console.log(data);
     });
   };
 

@@ -2,13 +2,13 @@
   <div class="posts-list">
     <div class="post" ng-repeat="post in posts | orderBy:'created_at':true">
       <span class="date" ng-bind="post.created_at | date:'shortDate'"></span>
-      <h2><a ng-href="{{ '/posts/' + post.id }}" ng-bind="post.title"></a></h2>
+      <h2><a ng-href="{{ '/posts/' + post.slug }}" ng-bind="post.title"></a></h2>
       <div>
         <div ng-if="post.figure" ng-bind-html="post.figure"></div>
-        <div class="blurb">
-          <p ng-bind="post.blurb | concatenate:'...':35"></p>
+        <div class="blurb" ng-bind-html="post.blurb"></div>
+        <div ng-if="post.has_more_content">
+          <a ng-href="{{ '/posts/' + post.slug }}">Continue Reading <span class="fa fa-angle-double-right"></span></a>
         </div>
-        <a ng-href="{{ '/posts/' + post.id }}">Continue Reading <span class="fa fa-angle-double-right"></span></a>
       </div>
     </div>
   </div>

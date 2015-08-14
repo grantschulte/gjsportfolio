@@ -4,7 +4,7 @@
   </div>
 
   <div class="project-list" ng-show="pageLoaded">
-    <div ng-repeat="project in projects | orderBy: 'id'" class="project-card" ng-class="{ suna: (project.name === 'SunaBros') }" project-card>
+    <div ng-repeat="project in projects | orderBy: 'featured'" class="project-card" ng-class="{ suna: (project.name === 'SunaBros') }" project-card>
       <div class="preview">
         <span class="name" ng-bind="project.name"></span>
         <span class="info" ng-bind="project.short_description"></span>

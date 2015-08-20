@@ -12,6 +12,7 @@ gem 'pg',                   '0.17.1'
 gem 'paperclip',            '3.4.2'
 gem 'bcrypt',               '~> 3.1.7'
 gem 'aws-sdk'
+gem 'newrelic_rpm'
 
 group :development, :test do
   gem 'sqlite3',     '1.3.9'

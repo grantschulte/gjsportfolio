@@ -1,9 +1,9 @@
 <section class="projects-index content-container" ng-controller="projectsCtrl">
-  <div class="loader" ng-hide="pageLoaded">
+  <div class="loader" ng-hide="pageLoaded" ng-cloak>
     <%= render 'shared/loader' %>
   </div>
 
-  <div class="project-list" ng-show="pageLoaded">
+  <div class="project-list" ng-show="pageLoaded" ng-cloak>
     <div ng-repeat="project in projects | orderBy: 'id'" class="project-card" ng-class="{ suna: (project.name === 'SunaBros') }" project-card>
       <div class="preview">
         <span class="name" ng-bind="project.name"></span>

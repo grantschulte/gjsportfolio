@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.all
+    @posts = Post.all.limit(params[:limit]).offset(params[:offset]).reverse_order
+    @post_count = Post.count
 
     respond_to do |format|
       format.html

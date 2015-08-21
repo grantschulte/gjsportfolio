@@ -66,6 +66,33 @@
       }
     }
   }
+
+  .more {
+    width: 580px;
+    margin: 0 auto 50px;
+    text-align: center;
+
+    button {
+      padding: 0;
+      width: 180px;
+      height: 45px;
+      color: $redLink;
+      font-family: $lato;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 43px;
+      text-transform: uppercase;
+      background-color: #fff;
+      border: 1px solid $redLink;
+      border-radius: 5px;
+      cursor: pointer;
+      
+      &:hover {
+        color: $redLinkHover;
+        border-color: $redLinkHover;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 767px) {

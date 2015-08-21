@@ -1,5 +1,9 @@
 <section class="posts-index content-container" ng-controller="postsIndexCtrl">
-  <div class="posts-list">
+  <div class="loader" ng-hide="pageLoaded" ng-cloak>
+    <%= render 'shared/loader' %>
+  </div>
+
+  <div class="posts-list" ng-show="pageLoaded" ng-cloak>
     <div class="post" ng-repeat="post in posts | orderBy:'created_at':true">
       <span class="date" ng-bind="post.created_at | date:'shortDate'"></span>
       <h2><a ng-href="{{ '/posts/' + post.slug }}" ng-bind="post.title"></a></h2>
@@ -11,5 +15,8 @@
         </div>
       </div>
     </div>
+  </div>
+  <div class="more" data-total-posts="<%= @post_count %>" ng-hide="posts.length === postCount || !pageLoaded">
+    <button ng-click="getMoreArticles()">More Articles</button>
   </div>
 </section>

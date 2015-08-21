@@ -21,6 +21,7 @@ portfolioApp.controller('postsIndexCtrl', ['$scope', 'Posts', function($scope, P
 
       setTimeout(function() {
         $scope.$apply(function() {
+          console.log('ok');
           $scope.pageLoaded = true;
         });
       }, $scope.loadDelay);

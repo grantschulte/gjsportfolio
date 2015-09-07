@@ -1,4 +1,4 @@
-portfolioApp.controller('postsShowCtrl', ['$scope', 'Posts', function($scope, Posts) {
+portfolioApp.controller('postsShowCtrl', ['$scope', 'Posts', '$sce', function($scope, Posts, $sce) {
 
   var init = function() {
     getPosts();
@@ -9,6 +9,7 @@ portfolioApp.controller('postsShowCtrl', ['$scope', 'Posts', function($scope, Po
 
     Posts.get({ slug: slug }, function(data) {
       $scope.post = data;
+      $scope.post.content = $sce.trustAsHtml(data.content);
     });
   };
 

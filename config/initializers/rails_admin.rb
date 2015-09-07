@@ -5,7 +5,7 @@ RailsAdmin.config do |config|
       u == 'grant' && p == 'i@mth3w@lrus'
     end
   end
-
+``
   ### Popular gems integration
 
   ## == Devise ==

@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
 
   def authenticate
     authenticate_or_request_with_http_digest("Application") do |name|
-      USERS["grant"]
+      USERS[name]
     end
   end
 end

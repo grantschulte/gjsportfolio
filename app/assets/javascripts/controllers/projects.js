@@ -16,6 +16,8 @@ portfolioApp.controller('projectsCtrl', ['$scope', 'Projects', function($scope, 
     Projects.query({ limit: $scope.limit, offset: $scope.offset }, function(data) {
       $scope.projects = data;
       $scope.emptyBoxes = new Array(calcEmptyBoxes(data.length));
+      
+      console.log(data);
 
       setTimeout(function(){
         $scope.$apply(function() {

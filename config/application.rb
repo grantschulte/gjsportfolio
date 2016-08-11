@@ -23,6 +23,6 @@ module Portfolio
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
     config.base_title = 'Grant J. Schulte'
-    config.secondary_title = 'Software Engineer'
+    config.secondary_title = 'Front-End Engineer'
   end
 end

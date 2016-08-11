@@ -11,11 +11,13 @@
     figure {
       margin: 0 auto 30px;
       padding: 20px;
+      padding-bottom: 0;
       border-radius: 3px;
       box-shadow: 0 0 5px 0 rgba(0,0,0,0.05);
 
       img {
-        margin-bottom: 15px;
+        display: block;
+        margin-bottom: 0;
         min-width: 100%;
         border-radius: 2px;
       }
